@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder | Survey</title>
+
+    <!-- Stylesheets -->
+    <!-- Add Bootstrap & Jquery... -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <!-- Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question. -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Friend Finder Survey!!</h1>
+                <br>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" required>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="inputPhotoURL">Picture URL</label>
+                        <input type="text" class="form-control" id="inputPhotoURL" required>
+                    </div>
+                    <br>
+                    <hr>
+                    <h4>
+                        <u>Select your answer with 1 being completely agrees, and 5 being completely disagrees</u>
+                    </h4>
+                    <br>
+
+
+                    <div class="form-group">
+                        <label for="inputQ1">Question 1</label>
+                        <h5>I love myself.</h5>
+                        <select name="inputQ1" id="inputQ1" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ2">Question 2</label>
+                        <h5>I enjoy spending time with others.</h5>
+                        <select name="inputQ2" id="inputQ2" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ3">Question 3</label>
+                        <h5>I'm a social drinker.</h5>
+                        <select name="inputQ3" id="inputQ3" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ4">Question 4</label>
+                        <h5>I love using social media for fun.</h5>
+                        <select name="inputQ4" id="inputQ4" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ5">Question 5</label>
+                        <h5>I prefer indoor activities rather then outdoor activities.</h5>
+                        <select name="inputQ5" id="inputQ5" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ6">Question 6</label>
+                        <h5>I enjoy spending time with family.</h5>
+                        <select name="inputQ6" id="inputQ6" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ7">Question 7</label>
+                        <h5>I prefer cats over dogs.</h5>
+                        <select name="inputQ7" id="inputQ7" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ8">Question 8</label>
+                        <h5>I'm a total technology geek.</h5>
+                        <select name="inputQ8" id="inputQ8" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ9">Question 9</label>
+                        <h5>I make decisions mainly based on logic.</h5>
+                        <select name="inputQ9" id="inputQ9" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="inputQ10">Question 10</label>
+                        <h5>I always stand up for myself.</h5>
+                        <select name="inputQ10" id="inputQ10" class="form-control" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="1">1 (Completely Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Completely Disagree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <button type="submit" class="btn btn-primary" id="submitSurvey">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Survey Script -->
+    <script>
+        $("#submitSurvey").on("click", function (event) {
+            event.preventDefault();
+            var newFriend = {
+                name: $("#inputName").val().trim(),
+                photoURL: $("#inputPhotoURL").val().trim(),
+                scores: [
+                    $("#inputQ1").val(),
+                    $("#inputQ2").val(),
+                    $("#inputQ3").val(),
+                    $("#inputQ4").val(),
+                    $("#inputQ5").val(),
+                    $("#inputQ6").val(),
+                    $("#inputQ7").val(),
+                    $("#inputQ8").val(),
+                    $("#inputQ9").val(),
+                    $("#inputQ10").val(),
+                ]
+            };
+            $.post("/api/friends", newFriend)
+                .then(function (data) {
+                    console.log("Friend Added", data);
+                    alert("Friend Added");
+                });
+
+        });
+    </script>
+
+
+    <!-- Add'l Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
