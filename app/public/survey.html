@@ -265,9 +265,11 @@
                 $.post("/api/friends", newFriend)
                     .then(function (data) {
                         console.log("Friend Added", data);
-
+                        
                         // Clear Form
                         $("#survey")[0].reset();
+
+                        alert("Friend Added. Finding your best match!")
 
                         // show modal w/ returned data
                         $("#match-name").text(data.name);
