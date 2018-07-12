@@ -29,7 +29,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <form>
+                <form class="was-validated" id="survey">
 
                     <div class="form-group">
                         <label for="inputName">Name</label>
@@ -52,7 +52,7 @@
                         <label for="inputQ1">Question 1</label>
                         <h5>I love myself.</h5>
                         <select name="inputQ1" id="inputQ1" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -66,7 +66,7 @@
                         <label for="inputQ2">Question 2</label>
                         <h5>I enjoy spending time with others.</h5>
                         <select name="inputQ2" id="inputQ2" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -80,7 +80,7 @@
                         <label for="inputQ3">Question 3</label>
                         <h5>I'm a social drinker.</h5>
                         <select name="inputQ3" id="inputQ3" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -94,7 +94,7 @@
                         <label for="inputQ4">Question 4</label>
                         <h5>I love using social media for fun.</h5>
                         <select name="inputQ4" id="inputQ4" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -108,7 +108,7 @@
                         <label for="inputQ5">Question 5</label>
                         <h5>I prefer indoor activities rather then outdoor activities.</h5>
                         <select name="inputQ5" id="inputQ5" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -122,7 +122,7 @@
                         <label for="inputQ6">Question 6</label>
                         <h5>I enjoy spending time with family.</h5>
                         <select name="inputQ6" id="inputQ6" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -136,7 +136,7 @@
                         <label for="inputQ7">Question 7</label>
                         <h5>I prefer cats over dogs.</h5>
                         <select name="inputQ7" id="inputQ7" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -150,7 +150,7 @@
                         <label for="inputQ8">Question 8</label>
                         <h5>I'm a total technology geek.</h5>
                         <select name="inputQ8" id="inputQ8" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -164,7 +164,7 @@
                         <label for="inputQ9">Question 9</label>
                         <h5>I make decisions mainly based on logic.</h5>
                         <select name="inputQ9" id="inputQ9" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -178,7 +178,7 @@
                         <label for="inputQ10">Question 10</label>
                         <h5>I always stand up for myself.</h5>
                         <select name="inputQ10" id="inputQ10" class="form-control" required>
-                            <option selected disabled>Choose...</option>
+                            <option value="">Choose...</option>
                             <option value="1">1 (Completely Agree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -195,44 +195,98 @@
         </div>
     </div>
 
+    <!-- Match Modal -->
+    <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Best Match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 id="match-name"></h3>
+                    <img id="match-photoURL" src="" alt="Friend Image" style="width:400px; height: 500px; object-fit: scale-down">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Survey Script -->
-    <script>
-        $("#submitSurvey").on("click", function (event) {
-            event.preventDefault();
-            var newFriend = {
-                name: $("#inputName").val().trim(),
-                photoURL: $("#inputPhotoURL").val().trim(),
-                scores: [
-                    $("#inputQ1").val(),
-                    $("#inputQ2").val(),
-                    $("#inputQ3").val(),
-                    $("#inputQ4").val(),
-                    $("#inputQ5").val(),
-                    $("#inputQ6").val(),
-                    $("#inputQ7").val(),
-                    $("#inputQ8").val(),
-                    $("#inputQ9").val(),
-                    $("#inputQ10").val(),
-                ]
-            };
-            $.post("/api/friends", newFriend)
-                .then(function (data) {
-                    console.log("Friend Added", data);
-                    alert("Friend Added");
-                });
 
-        });
-    </script>
 
 
     <!-- Add'l Scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+
+    <!-- Survey Script -->
+    <script>
+        $("#submitSurvey").on("click", function (event) {
+            event.preventDefault();
+
+            // Validate Form
+            // Form validation
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+
+                return isValid;
+            }
+
+            // If Form is Valid
+            if (validateForm()) {
+
+                var newFriend = {
+                    name: $("#inputName").val().trim(),
+                    photoURL: $("#inputPhotoURL").val().trim(),
+                    scores: [
+                        parseInt($("#inputQ1").val(), 10),
+                        parseInt($("#inputQ2").val(), 10),
+                        parseInt($("#inputQ3").val(), 10),
+                        parseInt($("#inputQ4").val(), 10),
+                        parseInt($("#inputQ5").val(), 10),
+                        parseInt($("#inputQ6").val(), 10),
+                        parseInt($("#inputQ7").val(), 10),
+                        parseInt($("#inputQ8").val(), 10),
+                        parseInt($("#inputQ9").val(), 10),
+                        parseInt($("#inputQ10").val(), 10)
+                    ]
+                };
+                console.log(newFriend);
+
+                $.post("/api/friends", newFriend)
+                    .then(function (data) {
+                        console.log("Friend Added", data);
+
+                        // Clear Form
+                        $("#survey")[0].reset();
+
+                        // show modal w/ returned data
+                        $("#match-name").text(data.name);
+                        $("#match-photoURL").attr("src", data.photoURL);
+
+                        // Show the modal with the best match
+                        $("#matchModal").modal("toggle");
+                    });
+            } else {
+                alert("Please Answer All Questions");
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>
